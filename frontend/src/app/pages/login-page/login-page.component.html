@@ -1,0 +1,98 @@
+<div class="centered-content">
+  <div class="white-box">
+    <div #alertContainer></div>
+    <h1 class="title has-text-primary">Login</h1>
+
+    <form [formGroup]="loginForm">
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input
+            autofocus
+            #emailInput
+            class="input has-background-light"
+            type="email"
+            placeholder="Email"
+            formControlName="email"
+            required
+          />
+          <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+        </p>
+
+        <!-- validation message -->
+        <div
+          *ngIf="email.invalid && (email.dirty || email.touched)"
+          class="has-text-danger"
+        >
+          <div *ngIf="email.errors.required || email.errors.pattern">
+            Login with a valid email address.
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <p class="control has-icons-left">
+          <input
+            #pwInput
+            class="input has-background-light"
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+            required
+          />
+          <span class="icon is-small is-left">
+            <i class="fa fa-lock"></i>
+          </span>
+        </p>
+
+        <!-- validation message -->
+        <div
+          *ngIf="password.invalid && (password.dirty || password.touched)"
+          class="has-text-danger"
+        >
+          <div *ngIf="password.errors.required || password.errors.minlength">
+            Enter a valid is required.
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <p class="control">
+          <button
+            type="submit"
+            class="button is-success is-medium is-fullwidth has-text-white"
+            (click)="onLoginButtonClicked(emailInput.value, pwInput.value)"
+            [disabled]="!loginForm.valid"
+          >
+            Login
+          </button>
+        </p>
+      </div>
+    </form>
+
+    <br />
+
+    <p class="has-text-grey">
+      Don't have an account? <a routerLink="/signup">Sign up</a> now!
+    </p>
+  </div>
+</div>
+
+<ul class="bg-bubbles">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>

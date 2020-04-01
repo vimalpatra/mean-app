@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap");
+
+$turquoise: #0cebeb;
+$green: #20e3b2;
+$light-green: #29ffc6;
+$dark-green: #02b185;
+
+$light: #f8f8f8;
+
+// Bulma Vars
+$family-sans-serif: "Poppins",
+sans-serif;
+$primary: $green;
+$link: $light-green;
+
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// base styles
+
+html {}
+
+html,
+body {
+  height: 100%;
+}
